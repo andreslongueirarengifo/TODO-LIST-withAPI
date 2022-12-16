@@ -10,8 +10,8 @@ function TodoList(prop) {
     }
 
      const list = prop.data.map((e,i)=>{
-             return (<ListGroup.Item className='d-flex justify-content-between'>{e.label} <Button variant="danger" onClick={()=>HandleRemoveTask(i)}><i className='fa-solid fa-trash'></i></Button> </ListGroup.Item>)
-         }) 
+        return (<ListGroup.Item className='d-flex justify-content-between'>{e.label} <Button variant="danger" onClick={()=>HandleRemoveTask(i)}><i className='fa-solid fa-trash'></i></Button> </ListGroup.Item>)
+    }) 
 
   return (
     <ListGroup>
