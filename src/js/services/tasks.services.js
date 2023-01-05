@@ -30,3 +30,36 @@ export const postTask = async (data) =>{
     console.log(error);
   }
 }
+
+
+export const deleteAllTasks = async () =>{
+  try {
+    const resp = await fetch(API_URI, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+    console.log(resp.ok);
+    console.log(resp.status);
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+
+export const createUser = async () =>{
+  try {
+    const resp = await fetch(API_URI,{
+      method: "POST",
+      body: [],
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+    console.log(resp.ok);
+    console.log(resp.status);
+  } catch (error) {
+    console.log(error)
+  }
+}
